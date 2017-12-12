@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueResource from 'vue-resource'
 import 'mint-ui/lib/style.css'  // 引用mint-ui样式
 import 'lib-flexible'   // 引用flexible
 import './assets/style/reset.css'
 import './assets/font/iconfont.css'
 import './mint-ui'
 
+Vue.use(VueResource)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

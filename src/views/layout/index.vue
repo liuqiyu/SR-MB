@@ -17,5 +17,7 @@
 </script>
 
 <style scoped>
-
+  .main-page {
+    padding-bottom: 1.444rem;
+  }
 </style>
