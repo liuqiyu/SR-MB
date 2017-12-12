@@ -1,0 +1,57 @@
+html {
+  /*font-size: 100px;*/
+}
+
+body {
+  font-size: 12px;
+  color: #666666;
+  font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+html, body {
+  margin: 0;
+}
+
+input,select,textarea,label {
+  font-size: 0.32rem;
+  font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, fieldset, form, label, input, legend, table, caption, tbody, tfoot, thead, tr, th, td, textarea, article, aside, audio, canvas, figure, footer, header, mark, menu, nav, section, time, video {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: rgba(0,0,0,.03);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.05);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mint-cell-wrapper {
+  font-size: 0.32rem;
+}
+
+.mint-indexsection-index {
+  font-size: 0.3778rem;
+}
+
+.mint-indexlist-navitem {
+  font-size: 0.32rem
+}
