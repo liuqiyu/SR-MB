@@ -55,3 +55,12 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, fieldset, fo
 .mint-indexlist-navitem {
   font-size: 0.32rem
 }
+
+
+.el-rate__icon {
+  font-size: 0.2778rem;
+}
+
+.el-rate__text {
+  font-size: 0.3333rem;
+}

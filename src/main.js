@@ -5,10 +5,11 @@ import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
 import 'mint-ui/lib/style.css'  // 引用mint-ui样式
+import 'element-ui/lib/theme-chalk/index.css'   // 引用element-ui样式
 import 'lib-flexible'   // 引用flexible
 import './assets/style/reset.css'
 import './assets/font/iconfont.css'
-import './mint-ui'
+import './app-ui'
 
 Vue.use(VueResource)
 Vue.config.productionTip = false

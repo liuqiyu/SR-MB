@@ -1,21 +1,43 @@
-# mobile-template
+# 移动端模板  VUE
 
-> A Vue.js project
+## 目录
 
-## Build Setup
+1、[前言](#preface)
+2、[技术栈](#technologyStack)
+3、[目录结构](#catalog)
+4、[描述](#describe)
+5、[结语](#end)
 
-``` bash
-# install dependencies
-npm install
+<a name="preface"></a>
+## 前言
+<a name="technologyStack"></a>
+## 技术栈
+<a name="catalog"></a>
+## 目录结构
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+|-- VueTemplate-m
+    |-- build
+    |-- config
+    |-- dist
+    |-- node_modules
+    |-- src                 开发目录
+        |-- assets          样式脚本库
+        |-- components      公用组件
+        |-- router          路由
+        |-- views           视图文件
+            |-- contacts    联系人
+            |-- film        电影
+            |-- layout      结构
+            |-- my          我的
+            |-- read        阅读
+        |-- api.js          接口地址
+        |-- app-ui.js       ui框架引入
+    |-- static
+
+```
+<a name="describe"></a>
+## 描述
+<a name="end"></a>
+## 结语

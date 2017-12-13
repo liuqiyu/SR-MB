@@ -5,7 +5,12 @@
 <script>
     // 移动端
 
-    export default {}
+    export default {
+      data () {
+        return {}
+      },
+      methods: {}
+    }
 </script>
 
 <style scoped>

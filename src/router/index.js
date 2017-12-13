@@ -3,7 +3,10 @@ import Router from 'vue-router'
 const Layout = r => require.ensure([], () => r(require('@/views/layout/index')), 'layout')
 const Contacts = r => require.ensure([], () => r(require('@/views/contacts/index')), 'layout')
 const Film = r => require.ensure([], () => r(require('@/views/film/index')), 'layout')
+// read
 const Read = r => require.ensure([], () => r(require('@/views/read/index')), 'layout')
+const BookItem = r => require.ensure([], () => r(require('@/views/read/item')), 'layout')
+
 const My = r => require.ensure([], () => r(require('@/views/my/index')), 'layout')
 
 Vue.use(Router)
@@ -29,7 +32,14 @@ export default new Router({
         {
           path: 'Read',
           name: Read,
-          component: Read
+          component: Read,
+          children: [
+            {
+              path: '/BookItem',
+              name: 'BookItem',
+              components: BookItem
+            }
+          ]
         },
         {
           path: 'My',
