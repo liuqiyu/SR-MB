@@ -74,7 +74,7 @@
           this.loading = true
           this.showLoading = true
           this.start = this.count * (this.page - 1)
-          // this.getLists()
+          this.getLists()
           setTimeout(() => {
             this.showLoading = false
             this.loading = false

@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const Layout = r => require.ensure([], () => r(require('@/views/layout/index')), 'layout')
-const Contacts = r => require.ensure([], () => r(require('@/views/contacts/index')), 'layout')
-const Film = r => require.ensure([], () => r(require('@/views/film/index')), 'layout')
+const Contacts = r => require.ensure([], () => r(require('@/views/contacts/index')), 'contacts')
+const Film = r => require.ensure([], () => r(require('@/views/film/index')), 'film')
 // read
-const Read = r => require.ensure([], () => r(require('@/views/read/index')), 'layout')
-const BookItem = r => require.ensure([], () => r(require('@/views/read/item')), 'layout')
+const Read = r => require.ensure([], () => r(require('@/views/read/index')), 'read')
+const BookItem = r => require.ensure([], () => r(require('@/views/read/item')), 'read')
 
 const My = r => require.ensure([], () => r(require('@/views/my/index')), 'layout')
 
@@ -32,14 +32,12 @@ export default new Router({
         {
           path: 'Read',
           name: Read,
-          component: Read,
-          children: [
-            {
-              path: '/BookItem',
-              name: 'BookItem',
-              components: BookItem
-            }
-          ]
+          component: Read
+        },
+        {
+          path: 'Read/BookItem',
+          name: BookItem,
+          component: BookItem
         },
         {
           path: 'My',
