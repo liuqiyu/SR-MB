@@ -2,11 +2,11 @@
 
 ## 目录
 
-1、[前言](#preface)
-2、[技术栈](#technologyStack)
-3、[目录结构](#catalog)
-4、[描述](#describe)
-5、[结语](#end)
+1. [前言](#preface)
+2. [技术栈](#technologyStack)
+3. [目录结构](#catalog)
+4. [描述](#describe)
+5. [结语](#end)
 
 <a name="preface"></a>
 ## 前言
