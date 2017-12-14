@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <transition name="slide-fade">
+    <transition name="fade">
       <router-view></router-view>
     </transition>
     <mNav></mNav>
@@ -25,12 +25,10 @@
     padding-bottom: 1.444rem;
   }
 
-  .slide-fade-leave-active {
-    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
   }
-  .slide-fade-leave-to
-    /* .slide-fade-leave-active for below version 2.1.8 */ {
-    transform: translateX(10px);
-    opacity: 0;
+  .fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+    opacity: 0
   }
 </style>
