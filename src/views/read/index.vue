@@ -28,7 +28,8 @@
         </li>
       </ul>
       <div class="page-infinite-loading" v-if="showLoading">
-        <span>加载中...</span>
+        <mt-spinner type="fading-circle" color="#f63"></mt-spinner>
+        <span class="loading-title">加载中...</span>
       </div>
     </div>
   </div>
@@ -47,12 +48,15 @@
           start: 0,
           count: 8,
           searchName: '东野圭吾',
-          showLoading: false
+          showLoading: false,
+          enterStatus: 0
         }
       },
       created () {
+        console.log(this.$route)
         this.list = []
-        // this.getLists()
+        this.getLists()
+        this.enterStatus = 1
       },
       methods: {
         // 获取列表数据
@@ -71,20 +75,26 @@
         },
         // 加载更多
         loadMore () {
-          this.loading = true
-          this.showLoading = true
-          this.start = this.count * (this.page - 1)
-          this.getLists()
-          setTimeout(() => {
-            this.showLoading = false
-            this.loading = false
-          }, 2500)
+          if (this.enterStatus) {
+            this.loading = true
+            this.showLoading = true
+            this.start = this.count * (this.page - 1)
+            this.getLists()
+            setTimeout(() => {
+              this.showLoading = false
+              this.loading = false
+            }, 2500)
+          }
         },
         // 查看书籍详情
         bookItem (item) {
           console.log(item)
           this.$router.push({path: '/Read/BookItem', query: {id: item.id}})
         }
+      },
+      beforeRouteLeave (to, from, next) {
+        this.enterStatus = 0
+        next()
       }
     }
 </script>
@@ -148,7 +158,13 @@
 
   .page-infinite-loading {
     text-align: center;
-    padding: 0.2rem 0;
     font-size: 0.3733rem;
+  }
+
+  .loading-title {
+    line-height: 0.7467rem;
+    font-size: 0.32rem;
+    display: inline-block;
+    color: #f63;
   }
 </style>

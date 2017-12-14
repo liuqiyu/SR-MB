@@ -14,6 +14,18 @@ import './app-ui'
 Vue.use(VueResource)
 Vue.config.productionTip = false
 
+// router.beforeEach((to, from, next) => {
+//   console.log(to)
+//   console.log(from)
+//   console.log(next)
+//   next()
+// })
+
+router.afterEach((to, from) => {
+  console.log(to)
+  console.log(from)
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

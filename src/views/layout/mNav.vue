@@ -1,19 +1,19 @@
 <template>
   <footer class="footer">
     <div class="footer-nav">
-      <router-link to="/Contacts">
+      <router-link to="/Contacts" :active-class="active">
         <span class="nav-icon iconfont icon-phonebook-o"></span>
         <span class="nav-name">联系人</span>
       </router-link>
-      <router-link to="/Read">
+      <router-link to="/Read" :active-class="active">
         <span class="nav-icon iconfont icon-yuedu1"></span>
         <span class="nav-name">阅读</span>
       </router-link>
-      <router-link to="/Film">
+      <router-link to="/Film" :active-class="active">
         <span class="nav-icon iconfont icon-74"></span>
         <span class="nav-name">电影</span>
       </router-link>
-      <router-link to="/My">
+      <router-link to="/My" :active-class="active">
         <span class="nav-icon iconfont icon-home"></span>
         <span class="nav-name">我</span>
       </router-link>
@@ -24,7 +24,13 @@
 <script>
   // 移动端 导航栏
 
-  export default {}
+  export default {
+    data () {
+      return {
+        active: 'active'
+      }
+    }
+  }
 </script>
 
 <style scoped>
@@ -65,7 +71,7 @@
     font-size: 0.3111rem;
   }
 
-  .router-link-active {
+  .active {
     color: #f63;
   }
 </style>
