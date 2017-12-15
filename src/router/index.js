@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+const login = r => require.ensure([], () => r(require('@/views/login/')), 'login')
+
 const Layout = r => require.ensure([], () => r(require('@/views/layout/index')), 'layout')
 const Contacts = r => require.ensure([], () => r(require('@/views/contacts/index')), 'contacts')
 const Film = r => require.ensure([], () => r(require('@/views/film/index')), 'film')
@@ -45,6 +48,11 @@ export default new Router({
           component: My
         }
       ]
+    },
+    {
+      path: '/login',
+      name: login,
+      component: login
     }
   ]
 })

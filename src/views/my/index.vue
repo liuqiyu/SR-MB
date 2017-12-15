@@ -49,6 +49,9 @@
       created () {
         // 获取当前城市
         this.cityUpdate()
+        this.genderUpdate()
+        this.heightUpdate()
+        this.weightUpdate()
       },
       computed: {
         ...mapState([
@@ -66,9 +69,9 @@
           'weightUpdate'
         ]),
         logout () {
-          this.genderUpdate()
-          this.heightUpdate()
-          this.weightUpdate()
+          // 退出登录
+          this.$router.push({path: '/login'})
+          window.sessionStorage.removeItem('login_status')
         }
       }
     }

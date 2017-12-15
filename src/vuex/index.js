@@ -12,7 +12,7 @@ const state = {
   gender: '',     //  性别
   height: '',    //  身高
   weight: '',    //  体重
-  login: true
+  login: false
 }
 
 export default new Vuex.Store({

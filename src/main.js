@@ -15,15 +15,16 @@ import './app-ui'
 Vue.use(VueResource)
 Vue.config.productionTip = false
 
-const city = remote_ip_info['city'];
-console.log(city)
+const isLogin = window.sessionStorage.getItem('login_status')
 
-// router.beforeEach((to, from, next) => {
-//   console.log(to)
-//   console.log(from)
-//   console.log(next)
-//   next()
-// })
+router.beforeEach((to, from, next) => {
+  if (!isLogin || isLogin === null) {
+    alert(1)
+    next('/login')
+  }
+  next()
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -31,4 +32,17 @@ new Vue({
   store,
   template: '<App/>',
   components: { App }
+  // watch: {
+  //   '$route': 'checkLogin'
+  // },
+  // methods: {
+  //   checkLogin () {
+  //     const isLogin = window.sessionStorage.getItem('login_status')
+  //     if (!isLogin || isLogin === null) {
+  //       this.$router.push({
+  //         path: '/login'
+  //       })
+  //     }
+  //   }
+  // }
 })
