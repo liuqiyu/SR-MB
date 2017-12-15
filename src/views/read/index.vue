@@ -53,10 +53,10 @@
         }
       },
       created () {
-        console.log(this.$route)
+        console.log(this.enterStatus)
         this.list = []
         this.getLists()
-        this.enterStatus = 1
+        this.enterStatus = 0
       },
       methods: {
         // 获取列表数据
@@ -69,12 +69,13 @@
                 console.log(response.body.books)
                 this.list = this.list.concat(response.body.books)
                 this.page += 1
-                console.log(this.page)
+                this.enterStatus = 1
               }
             })
         },
         // 加载更多
         loadMore () {
+          console.log(this.enterStatus, '狀態')
           if (this.enterStatus) {
             this.loading = true
             this.showLoading = true

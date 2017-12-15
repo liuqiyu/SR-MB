@@ -25,10 +25,10 @@
     padding-bottom: 1.444rem;
   }
 
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s
+  .fade-enter-active {
+    transition: opacity .05s
   }
-  .fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  .fade-enter /* .fade-leave-active in below version 2.1.8 */ {
     opacity: 0
   }
 </style>

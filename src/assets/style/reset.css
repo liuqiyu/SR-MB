@@ -79,6 +79,13 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, fieldset, fo
   position: fixed !important;
 }
 
+.mint-cell-allow-right::after {
+  width: 0.13rem;
+  height: 0.13rem;
+  right: 0.1rem;
+  border-color: #f63;
+}
+
 /** Element-ui 组件样式修改 **/
 
 .el-rate__icon {
