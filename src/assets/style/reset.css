@@ -86,6 +86,22 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, fieldset, fo
   border-color: #f63;
 }
 
+/** 表单 **/
+.mint-cell {
+  min-height: 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,.09);
+}
+
+.mint-field-core {
+  font-size: 0.45rem;
+}
+
+/** 登录页面登录按钮 **/
+
+.lg-btn label {
+  font-size: 0.42rem !important;
+}
+
 /** Element-ui 组件样式修改 **/
 
 .el-rate__icon {

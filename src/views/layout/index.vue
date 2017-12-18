@@ -26,7 +26,7 @@
   }
 
   .fade-enter-active {
-    transition: opacity .05s
+    transition: opacity .01s
   }
   .fade-enter /* .fade-leave-active in below version 2.1.8 */ {
     opacity: 0

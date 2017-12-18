@@ -15,34 +15,24 @@ import './app-ui'
 Vue.use(VueResource)
 Vue.config.productionTip = false
 
-const isLogin = window.sessionStorage.getItem('login_status')
-
-router.beforeEach((to, from, next) => {
-  if (!isLogin || isLogin === null) {
-    alert(1)
-    next('/login')
-  }
-  next()
-})
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   template: '<App/>',
-  components: { App }
-  // watch: {
-  //   '$route': 'checkLogin'
-  // },
-  // methods: {
-  //   checkLogin () {
-  //     const isLogin = window.sessionStorage.getItem('login_status')
-  //     if (!isLogin || isLogin === null) {
-  //       this.$router.push({
-  //         path: '/login'
-  //       })
-  //     }
-  //   }
-  // }
+  components: { App },
+  watch: {
+    '$route': 'checkLogin'
+  },
+  methods: {
+    checkLogin () {
+      const isLogin = window.sessionStorage.getItem('login_status')
+      if (!isLogin || isLogin === null) {
+        this.$router.push({
+          path: '/login'
+        })
+      }
+    }
+  }
 })
